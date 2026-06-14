@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter',sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+  radial-gradient(
+  circle at center,
+  #1b1464,
+  #09090f 70%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-x: hidden;
+}
+
+.bg-glow {
+  position: fixed;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+  radial-gradient(
+  circle,
+  rgba(139,92,246,.35),
+  transparent 70%
+  );
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+
+  text-align: center;
+}
+
+h1 {
+  color: white;
+
+  font-size: 4rem;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #94a3b8;
+
+  font-size: 1.1rem;
+
+  margin-bottom: 35px;
+}
+
+.prompt-box {
+
+  background:
+  rgba(255,255,255,.05);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  border-radius: 28px;
+
+  padding: 16px;
+
+  display: flex;
+
+  gap: 15px;
+}
+
+input {
+
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 18px;
+
+  padding: 18px;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+button {
+
+  border: none;
+
+  padding: 16px 30px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background:
+  linear-gradient(
+  135deg,
+  #8b5cf6,
+  #6366f1
+  );
+
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#loading {
+
+  color: #cbd5e1;
+
+  margin-top: 20px;
+
+  min-height: 24px;
+}
+
+.image-area {
+
+  margin-top: 35px;
+}
+
+.placeholder {
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  border-radius: 28px;
+
+  padding: 80px 30px;
+}
+
+.placeholder-icon {
+
+  font-size: 60px;
+
+  margin-bottom: 15px;
+}
+
+.placeholder h3 {
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 12px;
+}
+
+.placeholder p {
+
+  color: #94a3b8;
+
+  line-height: 1.6;
+}
+
+#result {
+
+  width: 100%;
+
+  display: none;
+
+  border-radius: 28px;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.4);
+}
+
+@media(max-width:700px) {
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .prompt-box {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .placeholder {
+    padding: 60px 20px;
+  }
+}

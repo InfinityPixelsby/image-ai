@@ -1,0 +1,72 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Image Generator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <div class="container">
+
+    <h1>AI Image Generator</h1>
+
+    <p class="subtitle">
+      Transform words into stunning AI artwork
+    </p>
+
+    <div class="prompt-box">
+
+      <input
+      type="text"
+      id="prompt"
+      placeholder="Describe your imagination..."
+      >
+
+      <button onclick="generateImage()">
+        Generate
+      </button>
+
+    </div>
+
+    <p id="loading"></p>
+
+    <div class="image-area">
+
+      <div id="placeholder" class="placeholder">
+
+        <div class="placeholder-icon">
+          ✨
+        </div>
+
+        <h3>Your masterpiece starts here</h3>
+
+        <p>
+          Describe anything and watch AI bring it to life
+        </p>
+
+      </div>
+
+      <img
+      id="result"
+      alt="Generated Image"
+      >
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
