@@ -17,15 +17,14 @@ async function generateImage() {
   try {
 
     const response = await fetch(
-      "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+      "https://image-ai-backend-1w9l.onrender.com/generate",
       {
         method: "POST",
         headers: {
-          "Authorization": "Bearer TEST_TOKEN",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          inputs: prompt
+          prompt: prompt
         })
       }
     );
@@ -38,24 +37,18 @@ async function generateImage() {
 
     const blob = await response.blob();
 
-    const imageURL =
-    URL.createObjectURL(blob);
+    const imageURL = URL.createObjectURL(blob);
 
     img.src = imageURL;
 
-    placeholder.style.display =
-    "none";
+    placeholder.style.display = "none";
+    img.style.display = "block";
 
-    img.style.display =
-    "block";
-
-    loading.textContent =
-    "Done!";
+    loading.textContent = "Done!";
 
   } catch (err) {
 
-    loading.textContent =
-    err.message;
+    loading.textContent = err.message;
 
   }
 }
